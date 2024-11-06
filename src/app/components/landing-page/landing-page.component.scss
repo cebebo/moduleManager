@@ -1,0 +1,6 @@
+@import '../../../styles.scss';
+
+.content {
+    height: 100vh;
+    @include dflex($jc:flex-start);
+}

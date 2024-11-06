@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/fonts.scss";
+
+$bgColorMain: #FAFAD2;
+$colorDarkBlue: #222E46;
+$colorBlue: rgb(58, 90, 121);
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+@mixin dflex($d:flex, $jc:center, $ai:center, $fd:column) {
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
+}
+
+.container {
+    width: 100%;
+    @include dflex();
+    background-color: $bgColorMain;
+}
+
+.raster {
+    width: 100%;
+    max-width: 1440px;
+}
+
+button {
+    border: 0;
+    padding: 12px;
+    background-color: $colorDarkBlue;
+    color: white;    
+    border-radius: 12px;
+    font-size: 18px;
+    &:hover {
+        cursor: pointer;
+        background-color: #FF8901;
+    }
+    font-family: 'Love Ya Like A Sister', sans-serif;
+}
+
+.mr24 {
+    margin-right: 24px;
+}

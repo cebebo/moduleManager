@@ -1,0 +1,26 @@
+@import '../../../../styles.scss';
+
+.headerLine {
+    width: 100%;
+    max-width: 1440px;
+    @include dflex($fd: row, $jc: space-between);
+}
+
+.mainButton {
+    font-size: 32px;
+    background-color: $colorBlue;
+}
+
+#mainLogo {
+    height: 100px;
+    padding-left: 24px;
+
+}
+
+.bgcYellow {
+    background-color: yellow;
+}
+
+h1 {
+    font-size: 20px;
+}
