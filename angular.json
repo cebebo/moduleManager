@@ -94,6 +94,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "modulemanager:build:production",
+              "serveTarget": "modulemanager:serve:production"
+            },
+            "development": {
+              "buildTarget": "modulemanager:build:development",
+              "serveTarget": "modulemanager:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }

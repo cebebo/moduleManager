@@ -1,8 +1,10 @@
 <div class="container">
     <div class="content raster">
-        <h1>Module erstellen</h1>
-        <h3>Richte dir einen Verteilungsplan ein, in dem du beliebige Module hinzufügst. Lege für die Verteilung Regeln fest und bestimme zu jedem einzelnen Modul individuelle Eigenschaften.</h3>
-        <button class="fontSister">Neuen Verteilerplan erstellen</button>
-        <app-create-new></app-create-new>
+        <h1>Verteilungsplan erstellen</h1>
+        <h3>Erstelle einen neuen Verteilungsplan ein, in dem du beliebige Module hinzufügst. Lege für die Verteilung Regeln fest und bestimme zu jedem einzelnen Modul individuelle Eigenschaften.</h3>
+        <button class="fontSister" (click)="createNewList(true)">Neuen Verteilerplan erstellen</button>
+        @if(new.createNew) {
+            <app-create-new></app-create-new>
+        }
     </div>
 </div>

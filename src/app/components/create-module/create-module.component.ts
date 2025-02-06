@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CreateNewComponent } from "./create-new/create-new.component";
+import { SettingsService } from '../../settings.service';
 
 @Component({
   selector: 'app-create-module',
@@ -10,6 +11,10 @@ import { CreateNewComponent } from "./create-new/create-new.component";
 })
 export class CreateModuleComponent {
 
-createNew = false;
+new = inject(SettingsService);
+
+createNewList(bol:boolean) {
+  this.new.createNew = bol;  
+}
 
 }

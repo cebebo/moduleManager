@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "module-manager-fe079": {
+      "hosting": {
+        "modulemanager": [
+          "module-manager-fe079"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "module-manager-fe079"
+  }
+}

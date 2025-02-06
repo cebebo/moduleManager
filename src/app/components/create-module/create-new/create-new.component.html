@@ -3,11 +3,16 @@
     <input name="password" type="password" placeholder="Passwort festlegen">
     <input name="password2" type="password" placeholder="Passwort wiederholen">
     <input name="title" type="text" placeholder="Titel eintragen">
-    <button>Fertig</button>
+    @if(!new.createID){
+    <button (click)="generateID()">Fertig</button>
+    }
+    @if(new.createID) {
     <div class="showID">
         <h2>Deine Plan-ID lautet:</h2>
-        <h1>XXXXXX</h1>
-        <h3>Notiere dir diese generierte Plan-ID. Zusammen mit deinem festgelegten Passwort kannst du deine Module verwalten und auswerten.</h3>
+        <h1 class="idPresentation">{{ new.createdID }}</h1>
+        <h3>Notiere dir diese generierte Plan-ID. Zusammen mit deinem festgelegten Passwort kannst du deine Module
+            verwalten und auswerten.</h3>
     </div>
-    <button>Verteilerplan fertigstellen</button>
+    <a routerLink="/addModules"><button (click)="generateList()">Verteilerplan fertigstellen</button></a>
+    }
 </div>
